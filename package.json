@@ -1,0 +1,24 @@
+{
+  "name": "NASA-MISSION-CONTROL-PROJECT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:install-server": "npm install --prefix server",
+    "install:install-client": "npm install --prefix client",
+    "install": "concurrently npm:install:*",
+    "watch:server": "npm run watch --prefix server",
+    "server": "npm run watch --prefix server",
+    "watch:client": "npm run start --prefix client",
+    "client": "npm run start --prefix client",
+    "watch": "concurrently npm:watch:*",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
